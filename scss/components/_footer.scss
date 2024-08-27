@@ -1,0 +1,98 @@
+.footer {
+    background-color: $colorTitulos;
+    color: $colorBlanco;
+}
+footer {
+    ul {
+        list-style-type: none;
+    }
+}
+.grid-container-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "logo"
+    "menu"
+    "contacto"
+    "horarios"
+    "insta"
+    "derechos";
+}
+.link-logo-footer {
+    grid-area: logo;
+    @include flex(row, wrap, center, center, 0);
+}
+.logo-footer {
+    padding: 2em 0;
+}
+.menu-footer {
+    margin: 5vh auto;
+    grid-area: menu;
+}
+.flex-container-nav-footer {
+    @include flex(row, wrap, center, center, 1em);
+}
+.dividido {
+    display: inline;
+}
+.contacto-footer {
+    grid-area: contacto;
+    margin: 0 5%;
+}
+.map-footer {
+    width: 100%;
+    height: 40vh;
+    border: 0;
+}
+.contacto-footer2 {
+    width: 90%;
+    color: $grisLetrasFooter;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        color: $primaryColor;
+        text-decoration: none;
+    }
+}
+.horarios-footer {
+    grid-area: horarios;
+    margin: 0 5%;
+    @include flexSimple(column, center, flex-start);
+}
+.titulo-footer {
+    font-family: $fontHeadings;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.parrafo-footer {
+    font-family: $fontBody;
+    font-size: 1em;
+    font-weight: 350;
+}
+.instagram {
+    grid-area: insta;
+    @include flexSimple(column, center, center);
+    margin: 0 0 3vh 0;
+}
+.logo-instagram {
+    max-width: 20px;
+    transition: 0.5s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+.derechos {
+    grid-area: derechos;
+}
+.copyrights {
+    color: $grisLetrasFooter;
+}
+.link-copyrights {
+    color: $grisLetrasFooter;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        color: $primaryColor;
+        text-decoration: none;
+    }
+}

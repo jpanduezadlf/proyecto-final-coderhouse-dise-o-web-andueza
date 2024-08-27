@@ -1,0 +1,36 @@
+.servicios-disponibles { /*esto es la sección que contiene los servicios del hotel*/
+    background-color: $fondoClaro;
+}
+.servicio { /*esto es el espacio que tiene cada servicio con su texto e ícono*/
+    font-family: $fontBody;
+    font-weight: 300;
+    margin: 5vh auto;
+    @include flexSimple(column, center, center);
+}
+.icono-servicio { /*esto es el ícono de cada servicio*/
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    margin: 3vh auto;
+
+    &:hover { /*esto es el ícono de cada servicio cuando el mouse pasa por arriba*/
+        animation-name: agranda;
+        animation-iteration-count: 5;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+    }
+}
+.texto-servicio { /*esto es el texto de cada servicio*/
+    font-size: 1.3em;
+    font-weight: 400;
+    color: $colorTitulos;
+    text-align: center;
+}
+.subtexto-servicio { /*esto es el subtexto del último servicio*/
+    font-weight: 200;
+    font-size: 0.8em;
+    text-align: center;
+    color: $colorLetras;
+    margin: 1vh auto;
+}

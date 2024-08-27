@@ -1,0 +1,20 @@
+.imagen-presentacion { /*esto habla de la imagen que va en la mitad de la pantalla en la sección presentación */
+    height: auto;
+}
+.textoMain {
+    @include flexSimple(column, center, center);
+}
+.titulo-main { /*es el título de la página, el único h1*/
+    font-size: 2.7em;
+    font-weight: 450;
+    color: $colorTitulos;
+    margin: 0.5em 0;
+}
+.presentacion {
+    p {
+        width: 65%;
+        text-align: justify;
+        font-family: $fontBody;
+        color: $colorLetras;
+    }
+}

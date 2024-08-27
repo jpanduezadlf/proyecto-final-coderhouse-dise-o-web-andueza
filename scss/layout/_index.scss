@@ -1,0 +1,138 @@
+
+body { // Estos son cambios que si se aplicaban en otra parte, quedaba mal la web. Son cambios para toda la página.
+    font-family: $fontHeadings;
+    color: $colorLetras;
+}
+.encabezado { /*esto incluye el video de fondo y todo lo que aparece sobre él*/
+    width: 100%;
+    height: 59vw;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.encabezado-pagina {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.video-fondo{ /*esta clase habla únicamente del video de fondo*/
+    object-fit: contain;
+    position: absolute;
+    top: -24px;
+    left: 0;
+    height: 59vw;
+    width: 100%;
+}
+.grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 2em;
+    font-family: $fontHeadings;
+    font-weight: 400;
+    color: $colorBlanco;
+}
+.pequeño-subtitulo { /*esto habla del párrafo bajo el anterior que indica el lugar*/
+    font-size: 0.8em;
+    font-family: $fontBody;
+    font-weight: 300;
+    color: $colorBlanco;
+    visibility: hidden;
+}
+.flex-container-svideo {
+    @include flexSimple(column, center, center);
+    height: calc(100% - 121px);
+}
+.sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    position: relative;
+    background-color: $colorNegro;
+    color: $colorBlanco;
+    width: 100%;
+    height: calc( 100% - 24px );
+}
+.flex-container-centro {
+    @include flexSimple(column, center, center);
+}
+.galeria-de-imagenes { /*esto es la sección galería en el inicio*/
+    img {
+        padding: 0;
+    }
+}
+.imagen-galeria { /*esto es cada una de las imágenes en la galería del inicio*/
+    object-fit: cover;
+    height: 80vh;
+    max-width: 90%;
+}
+.mapa-3d { /*esto es la sección en la que iría o bien un video o un mapa 3d*/
+    @include flexSimple(column, center, center);
+    height: 100vh;
+    color: $colorBlanco;
+    background-color: $colorLetras;
+    p, h2 {
+        max-width: 700px;
+    }
+}
+.blanco {
+    color: $colorBlanco;
+}
+.carousel-item {
+    float: inherit;
+}
+.comentarios { /*Esto es toda la sección de comentarios.*/
+    background-color: $fondoClaro;
+}
+.row-comentarios {
+    display: none;
+}
+.carousel-comentarios {
+    @include flexSimple(row, center, center);
+}
+.comentario { /*habla de todo lo que incluye un comentario*/
+    background-color: $colorBlanco;
+    width: 16em;
+    min-height: 350px;
+    margin: 2vh auto;
+    padding: 2%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+}
+.comentario-carousel {
+    background-color: $colorBlanco;
+    width: 16em;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    border-radius: 10px;
+}
+.comentario-flex-carousel {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+}
+.comillas-comentario { /*esto es la imagen ícono de las comillas del comentario*/
+    width: 30px;
+    justify-content: start;
+}
+.parrafo-comentario { /*esto es el texto de cada comentario*/
+    color: $colorLetras;
+    font-style: italic;
+    align-self: start;
+}
+.nombre-comentario { /*esto habla del nombre de de la persona que dejó el comentario*/
+    color: $colorTitulos;
+    align-self: end;
+}
+.pais-comentario { /*esto se refiere al país de la persona que dejó el comentario*/
+    color: $colorLetras;
+    align-self: end;
+}
+.boton-carousel-comentario {
+    position: relative;
+    top: 50px;
+}
+.centro { /*la idea de esta clase es centrar los textos*/
+    text-align: center;
+}

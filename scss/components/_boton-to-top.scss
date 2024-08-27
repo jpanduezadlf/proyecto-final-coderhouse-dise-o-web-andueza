@@ -1,0 +1,21 @@
+.to-top {
+    background: $primaryColor;
+    position: sticky;
+    bottom: 16px;
+    right: 32px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    @include flexSimple(row, center, center);
+    font-size: 32px;
+    color: $colorBlanco;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+.to-top.active {
+    bottom: 32px;
+    opacity: 1;
+    pointer-events: auto;
+}

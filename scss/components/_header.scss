@@ -1,0 +1,66 @@
+.grid-container-nav {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 96px 20px;
+    row-gap: 1fr;
+    align-items: center;
+}
+.navbar {
+    .container-fluid {
+        @include flex(row, inherit, flex-end, center, 0);
+    }
+}
+.grid-item-pais {
+    grid-column: span 2;
+}
+.flex-container-paises {
+    @include flex(row, nowrap, center, center, 0.3em);
+}
+header {
+    ul {
+        list-style-type: none;
+    }
+}
+.navbar-nav {
+    display: none;
+}
+.navbar-toggler {
+    @include flexSimple(row, center, center);
+}
+.flex-container-nav-lg {
+    display: none;
+}
+.nav-wrapper-paginas {
+    background-color: $colorOpuesto;
+}
+.logo-header { /*habla del logo que aparece en el header*/
+    max-width: 100px;
+}
+.menu-header { /*habla del menú del header*/
+    font-family: $fontBody;
+}
+nav {
+    ul {
+        li {
+            transition: 0.5s;
+            a {
+                text-decoration: none;
+                color: $colorBlanco;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+            &.selected {
+                a {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+.icono-idioma { /*esto es la imagen particular de cada lenguaje*/
+    width: 30px;
+    height: 20px;
+}

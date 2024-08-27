@@ -1,574 +1,666 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: 400;
 }
+
 p, h1, h2, h3, h4, h5, h6, img, li, ul, ol {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 .grid-container-nav {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: 96px 20px;
-    row-gap: 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 96px 20px;
+  row-gap: 1fr;
+  align-items: center;
 }
+
 .navbar .container-fluid {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-flow: row inherit;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
 }
+
 .grid-item-pais {
-    grid-column: span 2;
+  grid-column: span 2;
 }
+
 .flex-container-paises {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
 }
-@media screen and (min-width:768px) {
-    .grid-container-nav {
-        grid-template-columns: 120px 7fr 1fr;
-        grid-template-rows: 96px;
-    }
-    .grid-item-pais {
-        grid-column: 3;
-    }
-    .flex-container-paises {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.3em;
-        padding-right: 0.5em;
-    }
+
+header ul {
+  list-style-type: none;
 }
-body {
-    font-family: "Lora", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    color: #808080;
-}
-nav ul {
-    list-style-type: none;
-}
-div.idiomas ul {
-    list-style-type: none;
-}
-.encabezado { /*esto incluye el video de fondo y todo lo que aparece sobre él*/
-    width: 100%;
-    height: 59vw;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.encabezado-pagina {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-.video-fondo{ /*esta clase habla únicamente del video de fondo*/
-    object-fit: contain;
-    position: absolute;
-    top: -24px;
-    left: 0;
-    height: 59vw;
-    width: 100%;
-}
-.grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-    font-size: 2em;
-    font-family: "Lora";
-    font-weight: 400;
-    color: #fff;
-}
-.pequeño-subtitulo { /*esto habla del párrafo bajo el anterior que indica el lugar*/
-    font-size: 0.8em;
-    font-family: "Roboto";
-    font-weight: 300;
-    color: #fff;
-    visibility: hidden;
-}
-.flex-container-svideo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc( 100% - 121px);
-}
-.sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-    position: relative;
-    background-color: #233c6871;
-    color: #ffffff;
-    width: 100%;
-    height: calc( 100% - 24px );
-}
+
 .navbar-nav {
-    display: none;
+  display: none;
 }
+
 .navbar-toggler {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
 .flex-container-nav-lg {
-    display: none;
+  display: none;
 }
+
 .nav-wrapper-paginas {
-    background-color: #233c68;
+  background-color: #233c68;
 }
-@media screen and (min-width:576px) {
-    .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-        font-size: 2.2em;
-    }
-    .pequeño-subtitulo {
-        font-size: 0.8em;
-        visibility: none;
-    }
-    .video-fondo{ /*esta clase habla únicamente del video de fondo*/
-        top: -28px;
-    }
-    .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-        height: calc( 100% - 28px );
-    }
-}
-@media screen and (min-width:768px) {
-    .video-fondo{ /*esta clase habla únicamente del video de fondo*/
-        top: -36px;
-    }
-    .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-        font-size: 2.4em;
-    }
-    .pequeño-subtitulo {
-        font-size: 0.9em;
-        visibility: visible;
-    }
-    .navbar-toggler {
-        display: none;
-    }
-    .flex-container-nav {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1em;
-    }
-    .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-        height: calc( 100% - 36px );
-    }
-}
-@media screen and (min-width:992px) {
-    .video-fondo{ /*esta clase habla únicamente del video de fondo*/
-        top: -42px;
-    }
-    .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-        font-size: 2.6em;
-    }
-    .pequeño-subtitulo {
-        font-size: 1em;
-        visibility: visible;
-    }
-    .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-        height: calc( 100% - 42px );
-    }
-}
-@media screen and (min-width:1200px) {
-    .video-fondo{ /*esta clase habla únicamente del video de fondo*/
-        top: -49px;
-    }
-    .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-        font-size: 2.8em;
-    }
-    .pequeño-subtitulo {
-        font-size: 1.1em;
-        visibility: visible;
-    }
-    .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-        height: calc( 100% - 49px );
-    }
-}
-@media screen and (min-width:1400px) {
-    .video-fondo{ /*esta clase habla únicamente del video de fondo*/
-        top: -52px;
-    }
-    .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
-        font-size: 3em;
-    }
-    .pequeño-subtitulo {
-        font-size: 1.2em;
-        visibility: visible;
-    }
-    .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
-        height: calc( 100% - 52px );
-    }
-}
-@media screen and (max-width: 767px) {
-    .flex-container-svideo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: calc( 100% - 146px);
-    }    
-    div.idiomas {
-        position: relative;
-        bottom: 40px
-    }
-}
-/*.nav-wrapper { /*esto habla del logo, menú y los íconos de idioma en el header*/
 
-/*}
-.link-logo { /*Esto habla del link de los logos de la página, aunque no creo que tenga CSS*/
-
-/*}*/
 .logo-header { /*habla del logo que aparece en el header*/
-    max-width: 100px;
+  max-width: 100px;
 }
+
 .menu-header { /*habla del menú del header*/
-    font-family: "Roboto";
+  font-family: "Roboto";
+}
+
+nav ul li {
+  transition: 0.5s;
 }
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
 }
-nav ul li a:hover{
-    color: #dcc397;
+nav ul li a:hover {
+  color: #dcc397;
 }
 nav ul li.selected a {
-    color: #dcc397;
+  color: #dcc397;
 }
-/*.idiomas { /*esto es la sección que contiene las banderas de los idiomas*/
 
-/*}*/
 .icono-idioma { /*esto es la imagen particular de cada lenguaje*/
-    max-width: 30px;
+  width: 30px;
+  height: 20px;
 }
-/*.texto-inicio { /*esto es el texto que aparece sobre el video y bajo los menú y el logo*/
 
-/*}*/
-section {
-    padding: 10vh 0 10vh 0;
-}
-/*.presentacion { /*esto es la sección de presentación de la web*/
-    
-/*}*/
-.imagen-presentacion { /*esto habla de la imagen que va en la mitad de la pantalla en la sección presentación */
-    height: auto;
-}
-.textoMain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.titulo-main { /*es el título de la página, el único h1*/
-    font-size: 2.7em;
-    font-weight: 450;
-    color: #53585a;
-    margin: 0.5em 0;
-}
-.presentacion p {
-    width: 65%;
-    text-align: justify;
-    font-family: "Roboto";
-    color: #808080;
-}
-.flex-container-centro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.servicios-disponibles { /*esto es la sección que contiene los servicios del hotel*/
-    background-color: #f9f9f9;
-}
-.titulo-seccion { /*esto son los títulos de cada sección*/
-    font-family: "Lora";
-    font-weight: 450;
-    font-size: 2.5em;
-    padding-bottom: 1em;
-    color: #53585a;
-}
-.centro { /*la idea de esta clase es centrar los textos*/
-    text-align: center;
-}
-/*.iconos-servicios { /*esto es el espacio que tiene todos los íconos de servicios y sus textos correspondientes*/
-    
-/*}*/
-.servicio { /*esto es el espacio que tiene cada servicio con su texto e ícono*/
-    font-family: "Roboto";
-    font-weight: 300;
-    margin: 5vh auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.icono-servicio { /*esto es el ícono de cada servicio*/
-    height: 100px;
-    width: 100px;
-    cursor: pointer;
-    margin: 3vh auto;
-}
-/*.icono-servicio:hover { /*esto es el ícono de cada servicio cuando el mouse pasa por arriba*/
-    
-/*}*/
-.texto-servicio { /*esto es el texto de cada servicio*/
-    font-size: 1.3em;
-    font-weight: 400;
-    color: #53585a;
-    text-align: center;
-    font-family: inherit;
-}
-.subtexto-servicio { /*esto es el subtexto del último servicio*/
-    font-weight: 200;
-    font-size: 0.8em;
-    font-family: inherit;
-    text-align: center;
-    color: #808080;
-    margin: 1vh auto;
-}
-.galeria-de-imagenes img { /*esto es la sección galería en el inicio*/
-    padding: 0;
-}
-.imagen-galeria { /*esto es cada una de las imágenes en la galería del inicio*/
-    object-fit: cover;
-    height: 80vh;
-    max-width: 90%;
-}
-@media screen and (max-width:768px) {
-    .galeria-de-imagenes-div { /*esto es cada una de las imágenes en la galería del inicio*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-}
-.mapa-3d p, .mapa-3d h2 {
-    max-width: 700px;
-}
-.mapa-3d { /*esto es la sección en la que iría o bien un video o un mapa 3d*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
-    background-color: #808080;
-}
-.blanco {
-    color: #fff;
-}
-.carousel-item {
-    float: inherit;
-}
-.comentarios { /*Esto es toda la sección de comentarios.*/
-    background-color: #f9f9f9;
-}
-.row-comentarios {
-    display: none;
-}
-.carousel-comentarios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media screen and (min-width:992px) {
-    .carousel-comentarios {
-        display: none;
-    }
-    .row-comentarios {
-        display: flex;
-    }
-}
-.comentario { /*habla de todo lo que incluye un comentario*/
-    background-color: #fff;
-    width: 16em;
-    min-height: 350px;
-    margin: 2vh auto;
-    padding: 2%;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 6fr 1fr 1fr;
-}
-.comentario-carousel {
-    background-color: #fff;
-    width: 16em;
-    height: 270px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2%;
-    border-radius: 10px;
-}
-.comentario-flex-carousel {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 6fr 1fr 1fr;
-}
-.comillas-comentario { /*esto es la imagen ícono de las comillas del comentario*/
-    width: 30px;
-    justify-content: start;
-}
-.parrafo-comentario { /*esto es el texto de cada comentario*/
-    color: #808080;
-    font-style: italic;
-    align-self: start;
-}
-.nombre-comentario { /*esto habla del nombre de de la persona que dejó el comentario*/
-    color: #53585a;
-    align-self: end;
-}
-.pais-comentario { /*esto se refiere al país de la persona que dejó el comentario*/
-    color: #808080;
-    align-self: end;
-}
-.boton-carousel-comentario {
-    position: relative;
-    top: 50px;
-}
 .footer {
-    background-color: #53585a;
-    color: white;
+  background-color: #53585a;
+  color: #fff;
 }
+
+footer ul {
+  list-style-type: none;
+}
+
 .grid-container-footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "logo"
-    "menu"
-    "contacto"
-    "horarios"
-    "insta"
-    "derechos";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo" "menu" "contacto" "horarios" "insta" "derechos";
 }
-@media screen and (min-width:576px) {
-    .grid-container-footer {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "logo logo"
-        "menu menu"
-        "contacto horarios"
-        "insta insta"
-        "derechos derechos";
-    }
-}
+
 .link-logo-footer {
-    grid-area: logo;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  grid-area: logo;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
 }
+
 .logo-footer {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2em 0;
+  padding: 2em 0;
 }
+
 .menu-footer {
-    align-items: center;
-    justify-content: center;
-    margin: 5vh auto;
-    grid-area: menu;
+  margin: 5vh auto;
+  grid-area: menu;
 }
+
 .flex-container-nav-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
+
 .dividido {
-    display: inline;
+  display: inline;
 }
+
 .contacto-footer {
-    grid-area: contacto;
-    margin: 0 5%;
+  grid-area: contacto;
+  margin: 0 5%;
 }
+
 .map-footer {
-    width: 100%;
-    height: 40vh;
-    border: 0;
+  width: 100%;
+  height: 40vh;
+  border: 0;
 }
+
 .contacto-footer2 {
-    width: 90%;
-    color: #babcbd;
-    text-decoration: none;
+  width: 90%;
+  color: #babcbd;
+  text-decoration: none;
+  transition: 0.5s;
 }
 .contacto-footer2:hover {
-    color: #dcc397;
-    text-decoration: none;
+  color: #dcc397;
+  text-decoration: none;
 }
+
 .horarios-footer {
-    grid-area: horarios;
-    margin: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  grid-area: horarios;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
+
 .titulo-footer {
-    font-family: "Lora";
-    font-size: 1.5em;
-    font-weight: 400;
+  font-family: "Lora";
+  font-size: 1.5em;
+  font-weight: 400;
 }
+
 .parrafo-footer {
-    font-family: "Roboto";
-    font-size: 1em;
-    font-weight: 350;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 350;
 }
+
 .instagram {
-    grid-area: insta;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 3vh 0;
+  grid-area: insta;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 3vh 0;
 }
+
 .logo-instagram {
-    max-width: 20px;
+  max-width: 20px;
+  transition: 0.5s;
 }
+.logo-instagram:hover {
+  transform: rotate(360deg);
+}
+
 .derechos {
-    grid-area: derechos;
+  grid-area: derechos;
 }
+
 .copyrights {
-    color: #babcbd;
+  color: #babcbd;
 }
+
 .link-copyrights {
-    color: #babcbd;
-    text-decoration: none;
+  color: #babcbd;
+  text-decoration: none;
+  transition: 0.5s;
 }
 .link-copyrights:hover {
-    color: #dcc397;
-    text-decoration: none;
+  color: #dcc397;
+  text-decoration: none;
 }
-.form-floating .mensaje {
-    height: 206px;
+
+section {
+  padding: 10vh 0 10vh 0;
 }
-.boton-contacto-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+
+.titulo-seccion { /*esto son los títulos de cada sección*/
+  font-family: "Lora";
+  font-weight: 450;
+  font-size: 2.5em;
+  padding-bottom: 1em;
+  color: #53585a;
 }
-.boton-contacto {
-    background-color: #233c68;
+
+.imagen-presentacion { /*esto habla de la imagen que va en la mitad de la pantalla en la sección presentación */
+  height: auto;
 }
+
+.textoMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-main { /*es el título de la página, el único h1*/
+  font-size: 2.7em;
+  font-weight: 450;
+  color: #53585a;
+  margin: 0.5em 0;
+}
+
+.presentacion p {
+  width: 65%;
+  text-align: justify;
+  font-family: "Roboto";
+  color: #808080;
+}
+
+.servicios-disponibles { /*esto es la sección que contiene los servicios del hotel*/
+  background-color: #f9f9f9;
+}
+
+.servicio { /*esto es el espacio que tiene cada servicio con su texto e ícono*/
+  font-family: "Roboto";
+  font-weight: 300;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-servicio { /*esto es el ícono de cada servicio*/
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  margin: 3vh auto;
+}
+.icono-servicio:hover { /*esto es el ícono de cada servicio cuando el mouse pasa por arriba*/
+  animation-name: agranda;
+  animation-iteration-count: 5;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+
+.texto-servicio { /*esto es el texto de cada servicio*/
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #53585a;
+  text-align: center;
+}
+
+.subtexto-servicio { /*esto es el subtexto del último servicio*/
+  font-weight: 200;
+  font-size: 0.8em;
+  text-align: center;
+  color: #808080;
+  margin: 1vh auto;
+}
+
 .to-top {
-    background: #dcc397;
-    position: sticky;
-    bottom: 16px;
-    right: 32px;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+  background: #dcc397;
+  position: sticky;
+  bottom: 16px;
+  right: 32px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes agranda {
+  0% {
+    height: 100px;
+    width: 100px;
+  }
+  50% {
+    height: 110px;
+    width: 110px;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+  }
+}
+body {
+  font-family: "Lora";
+  color: #808080;
+}
+
+.encabezado { /*esto incluye el video de fondo y todo lo que aparece sobre él*/
+  width: 100%;
+  height: 59vw;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.encabezado-pagina {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-fondo { /*esta clase habla únicamente del video de fondo*/
+  object-fit: contain;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  height: 59vw;
+  width: 100%;
+}
+
+.grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+  font-size: 2em;
+  font-family: "Lora";
+  font-weight: 400;
+  color: #fff;
+}
+
+.pequeño-subtitulo { /*esto habla del párrafo bajo el anterior que indica el lugar*/
+  font-size: 0.8em;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #fff;
+  visibility: hidden;
+}
+
+.flex-container-svideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 121px);
+}
+
+.sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4431372549);
+  color: #fff;
+  width: 100%;
+  height: calc(100% - 24px);
+}
+
+.flex-container-centro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.galeria-de-imagenes { /*esto es la sección galería en el inicio*/ }
+.galeria-de-imagenes img {
+  padding: 0;
+}
+
+.imagen-galeria { /*esto es cada una de las imágenes en la galería del inicio*/
+  object-fit: cover;
+  height: 80vh;
+  max-width: 90%;
+}
+
+.mapa-3d { /*esto es la sección en la que iría o bien un video o un mapa 3d*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  background-color: #808080;
+}
+.mapa-3d p, .mapa-3d h2 {
+  max-width: 700px;
+}
+
+.blanco {
+  color: #fff;
+}
+
+.carousel-item {
+  float: inherit;
+}
+
+.comentarios { /*Esto es toda la sección de comentarios.*/
+  background-color: #f9f9f9;
+}
+
+.row-comentarios {
+  display: none;
+}
+
+.carousel-comentarios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.comentario { /*habla de todo lo que incluye un comentario*/
+  background-color: #fff;
+  width: 16em;
+  min-height: 350px;
+  margin: 2vh auto;
+  padding: 2%;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 6fr 1fr 1fr;
+}
+
+.comentario-carousel {
+  background-color: #fff;
+  width: 16em;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.comentario-flex-carousel {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 6fr 1fr 1fr;
+}
+
+.comillas-comentario { /*esto es la imagen ícono de las comillas del comentario*/
+  width: 30px;
+  justify-content: start;
+}
+
+.parrafo-comentario { /*esto es el texto de cada comentario*/
+  color: #808080;
+  font-style: italic;
+  align-self: start;
+}
+
+.nombre-comentario { /*esto habla del nombre de de la persona que dejó el comentario*/
+  color: #53585a;
+  align-self: end;
+}
+
+.pais-comentario { /*esto se refiere al país de la persona que dejó el comentario*/
+  color: #808080;
+  align-self: end;
+}
+
+.boton-carousel-comentario {
+  position: relative;
+  top: 50px;
+}
+
+.centro { /*la idea de esta clase es centrar los textos*/
+  text-align: center;
+}
+
+.form-floating .mensaje {
+  height: 206px;
+}
+
+.boton-contacto-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.boton-contacto {
+  background-color: #233c68;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container-nav {
+    grid-template-columns: 120px 7fr 1fr;
+    grid-template-rows: 96px;
+  }
+  .grid-item-pais {
+    grid-column: 3;
+  }
+  .flex-container-paises {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3em;
+    padding-right: 0.5em;
+  }
+}
+@media screen and (min-width: 576px) {
+  .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 2.2em;
+  }
+  .pequeño-subtitulo {
+    font-size: 0.8em;
+    visibility: none;
+  }
+  .video-fondo { /*esta clase habla únicamente del video de fondo*/
+    top: -28px;
+  }
+  .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    height: calc(100% - 28px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .video-fondo { /*esta clase habla únicamente del video de fondo*/
+    top: -36px;
+  }
+  .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 2.4em;
+  }
+  .pequeño-subtitulo {
+    font-size: 0.9em;
+    visibility: visible;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .flex-container-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+  }
+  .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    height: calc(100% - 36px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .video-fondo { /*esta clase habla únicamente del video de fondo*/
+    top: -42px;
+  }
+  .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 2.6em;
+  }
+  .pequeño-subtitulo {
+    font-size: 1em;
+    visibility: visible;
+  }
+  .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    height: calc(100% - 42px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .video-fondo { /*esta clase habla únicamente del video de fondo*/
+    top: -49px;
+  }
+  .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 2.8em;
+  }
+  .pequeño-subtitulo {
+    font-size: 1.1em;
+    visibility: visible;
+  }
+  .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    height: calc(100% - 49px);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .video-fondo { /*esta clase habla únicamente del video de fondo*/
+    top: -52px;
+  }
+  .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
+    font-size: 3em;
+  }
+  .pequeño-subtitulo {
+    font-size: 1.2em;
+    visibility: visible;
+  }
+  .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+    height: calc(100% - 52px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex-container-svideo {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .4s;
+    height: calc(100% - 146px);
+  }
+  div.idiomas {
+    position: relative;
+    bottom: 40px;
+  }
 }
-.to-top.active {
-    bottom: 32px;
-    opacity: 1;
-    pointer-events: auto;
+@media screen and (max-width: 768px) {
+  .galeria-de-imagenes-div { /*esto es cada una de las imágenes en la galería del inicio*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+@media screen and (min-width: 992px) {
+  .carousel-comentarios {
+    display: none;
+  }
+  .row-comentarios {
+    display: flex;
+  }
+}
+@media screen and (min-width: 576px) {
+  .grid-container-footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo logo" "menu menu" "contacto horarios" "insta insta" "derechos derechos";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

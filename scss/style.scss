@@ -1,0 +1,18 @@
+// Base
+@import "base/reset";
+@import "base/vars";
+@import "base/utilities";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/section";
+@import "components/presentacion";
+@import "components/servicios";
+@import "components/boton-to-top";
+
+// Layout
+@import "layout/animaciones";
+@import "layout/index";
+@import "layout/contact";
+@import "layout/mediaqueries";

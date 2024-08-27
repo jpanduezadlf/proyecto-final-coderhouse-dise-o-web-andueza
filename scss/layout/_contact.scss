@@ -1,0 +1,11 @@
+.form-floating {
+    .mensaje {
+        height: 206px;
+    }
+}
+.boton-contacto-container {
+    @include flexSimple(row, flex-end, center);
+}
+.boton-contacto {
+    background-color: $colorOpuesto;
+}
