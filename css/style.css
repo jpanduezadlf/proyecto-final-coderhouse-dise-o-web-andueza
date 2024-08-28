@@ -119,6 +119,8 @@ footer ul {
 
 .logo-footer {
   padding: 2em 0;
+  max-height: 80vh;
+  max-width: 80vw;
 }
 
 .menu-footer {
@@ -275,7 +277,7 @@ section {
 }
 .icono-servicio:hover { /*esto es el ícono de cada servicio cuando el mouse pasa por arriba*/
   animation-name: agranda;
-  animation-iteration-count: 5;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-duration: 0.5s;
   animation-delay: 0s;
