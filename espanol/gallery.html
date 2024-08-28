@@ -9,61 +9,97 @@
     <script src="https://kit.fontawesome.com/37897557b0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="encabezado-pagina">
-        <div class="nav-wrapper nav-wrapper-paginas grid-container-nav">
-            <div class="grid-item-logo">
-                <a href="../index.html" class="link-logo grid-item">
-                    <img src="../multimedia/logo-blanco-300x227.png" alt="Logo-link Home Lodge Pedregoso" class="logo-header">
-                </a>
-            </div>
-            <nav class="menu-header navbar navbar-dark grid-item-nav navbar-expand-md">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbarMd" aria-controls="offcanvasDarkNavbarMd" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarMd" aria-labelledby="offcanvasDarkNavbarLabelMd">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="flex-container-nav flex-grow-1 pe-3">
-                                <li class="flex-item-jp nav-item">
-                                    <a href="../index.html" class="" aria-current="page">Inicio</a>
-                                </li>
-                                <li class="flex-item-jp nav-item">
-                                    <a class="" href="./about-us.html">Sobre Nosotros</a>
-                                </li>
-                                <li class="selected flex-item-jp nav-item">
-                                    <a class="active" href="./gallery.html">Galería</a>
-                                </li>
-                                <li class="flex-item-jp nav-item">
-                                    <a class="" href="./contact.html">Contacto</a>
-                                </li>
-                            </ul>
+    <header class="encabezado cien-vh">
+        <div class="imagen-container">
+            <img class="imagen-fondo cien-vh" src="../multimedia/lodge-pedregoso-cesar.jpg" alt="Lodge Pedregoso">
+        </div>
+        <div class="sobre-img">
+            <div class="nav-wrapper grid-container-nav">
+                <div class="grid-item-logo">
+                    <a href="../index.html" class="link-logo grid-item">
+                        <img src="../multimedia/logo-blanco-300x227.png" alt="Logo-link Home Lodge Pedregoso" class="logo-header">
+                    </a>
+                </div>
+                <nav class="menu-header navbar navbar-dark grid-item-nav navbar-expand-md">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbarMd" aria-controls="offcanvasDarkNavbarMd" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbarMd" aria-labelledby="offcanvasDarkNavbarLabelMd">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="flex-container-nav flex-grow-1 pe-3">
+                                    <li class="flex-item-jp nav-item">
+                                        <a href="../index.html" class="" aria-current="page">Inicio</a>
+                                    </li>
+                                    <li class="flex-item-jp nav-item">
+                                        <a class="" href="./about-us.html">Sobre Nosotros</a>
+                                    </li>
+                                    <li class="selected flex-item-jp nav-item">
+                                        <a class="active" href="./gallery.html">Galería</a>
+                                    </li>
+                                    <li class="flex-item-jp nav-item">
+                                        <a class="" href="./contact.html">Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </nav>
+                <div class="idiomas grid-item-pais">
+                    <ul class="flex-container-paises">
+                        <li class="flex-item-jp"><a href="#"><img src="../multimedia/espanol-logo.png" alt="ES" class="icono-idioma"></a></li>
+                        <li class="flex-item-jp"><a href="../ingles/gallery-en.html"><img src="../multimedia/ingles-logo.png" alt="EN" class="icono-idioma"></a></li>
+                        <li class="flex-item-jp"><a href="../portugues/gallery-pt.html"><img src="../multimedia/portugues-logo.png" alt="PT" class="icono-idioma"></a></li>
+                    </ul>
                 </div>
-            </nav>
-            <div class="idiomas grid-item-pais">
-                <ul class="flex-container-paises">
-                    <li class="flex-item-jp"><a href="#"><img src="../multimedia/espanol-logo.png" alt="ES" class="icono-idioma"></a></li>
-                    <li class="flex-item-jp"><a href="../ingles/gallery-en.html"><img src="../multimedia/ingles-logo.png" alt="EN" class="icono-idioma"></a></li>
-                    <li class="flex-item-jp"><a href="../portugues/gallery-pt.html"><img src="../multimedia/portugues-logo.png" alt="PT" class="icono-idioma"></a></li>
-                </ul>
+            </div>
+            <div class="texto-inicio flex-container-simg">
+                <h1 class="titulo-pagina">GALERÍA</h1>
             </div>
         </div>
     </header>
     <main>
-        
+        <section class="container">
+            <div class="box">
+                <div class="columna">
+                    <img src="../multimedia/lodge-pedregoso-cesar.jpg" alt="Lodge Pedregoso" class="img-galeria">
+                    <img src="../multimedia/living-cesar.jpg" alt="Living Lodge" class="img-galeria">
+                    <img src="../multimedia/comedor-cesar.jpg" alt="Comedor Lodge" class="img-galeria">
+                    <img src="../multimedia/living-vlejana-cesar.jpg" alt="Living Lodge vista lejana" class="img-galeria">
+                    <img src="../multimedia/oficina-pasillo-segundo-piso-cesar.jpg" alt="Pasillo Oficina Segundo Piso Lodge" class="img-galeria">
+                    <img src="../multimedia/pieza-pedregoso-cesar.jpg" alt="Pieza Pedregoso vista 2" class="img-galeria">
+                    <img src="../multimedia/salita-primer-piso-cesar.jpg" alt="Salita primer piso Lodge" class="img-galeria">
+                </div>
+                <div class="columna">
+                    <img src="../multimedia/p-i.jpg" alt="Chimenea Lodge" class="img-galeria">
+                    <img src="../multimedia/oficina-primer-piso-cesar.jpg" alt="Oficina 1 Lodge" class="img-galeria">
+                    <img src="../multimedia/oficina-segundo-piso-cesar.jpg" alt="Oficina 2 Lodge" class="img-galeria">
+                    <img src="../multimedia/pasillo-segundo-piso-cesar.jpg" alt="Pasillo Segundo Piso Lodge" class="img-galeria">
+                    <img src="../multimedia/pieza-trancura-sector-curarrehue.jpg" alt="Pieza Trancura" class="img-galeria">
+                    <img src="../multimedia/salita-primer-piso-vlejana-cesar.jpg" alt="Sala de Estar Primer Piso Lodge" class="img-galeria">
+                    <img src="../multimedia/oficina-primer-piso-vlejana-cesar.jpg" alt="Oficina 1 Lodge vista lejana" class="img-galeria">
+                </div>
+                <div class="columna">
+                    <img src="../multimedia/pieza-pedregoso.jpg" alt="Pieza Pedregoso" class="img-galeria">
+                    <img src="../multimedia/pasillo-segundo-piso-vista2-cesar.jpg" alt="Pasillo Segundo Piso Lodge" class="img-galeria">
+                    <img src="../multimedia/pieza-machin-sector-curarrehue-cesar.jpg" alt="Pieza Machin" class="img-galeria">
+                    <img src="../multimedia/hall-entrada-vlejana-cesar.jpg" alt="Hall de entrada Lodge vista lejana" class="img-galeria">
+                    <img src="../multimedia/pasillo-segundo-piso-vlejana-cesar.jpg" alt="Pasillo Segundo Piso vista lejana" class="img-galeria">
+                    <img src="../multimedia/pieza-tolten-sector-quelenquelen-cesar.jpg" alt="Pieza Toltén" class="img-galeria">
+                    <img src="../multimedia/pieza-allipen-sector-quelenquelen-cesar.jpg" alt="Pieza Allipén" class="img-galeria">
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer grid-container-footer">
         <a href="../index.html" class="link-logo-footer">
-            <img src="../multimedia/logo-blanco-300x227.png" alt="Logo-link Home Lodge Pedregoso" class="logo-footer">
+            <img src="../multimedia/logo-blanco.png" alt="Logo-link Home Lodge Pedregoso" class="logo-footer">
         </a>
         <nav class="menu-footer">
             <ul class="flex-container-nav-footer">

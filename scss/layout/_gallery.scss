@@ -1,0 +1,14 @@
+.container {
+    .box {
+        @include flexSimple(column, space-between, flex-start);
+        .columna {
+            @include flexSimple(column, center, center);
+            width: 100%;
+            .img-galeria {
+                width: 100%;
+                margin-bottom: 15px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

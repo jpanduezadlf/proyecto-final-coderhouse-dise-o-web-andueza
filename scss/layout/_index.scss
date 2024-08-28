@@ -11,13 +11,13 @@ body { // Estos son cambios que si se aplicaban en otra parte, quedaba mal la we
     align-items: center;
     justify-content: center;
 }
-.encabezado-pagina {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
+//.encabezado-pagina {
+//    width: 100%;
+//    overflow: hidden;
+//    text-align: center;
+//    align-items: center;
+//    justify-content: center;
+//}
 .video-fondo{ /*esta clase habla únicamente del video de fondo*/
     object-fit: contain;
     position: absolute;

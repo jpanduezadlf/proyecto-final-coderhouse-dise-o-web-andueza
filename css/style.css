@@ -324,6 +324,43 @@ section {
   pointer-events: auto;
 }
 
+.imagen-container {
+  position: absolute;
+  height: inherit;
+  z-index: -1;
+}
+.imagen-container .imagen-fondo {
+  height: inherit;
+  object-fit: cover;
+}
+
+.flex-container-simg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 116px);
+}
+.flex-container-simg .titulo-pagina {
+  font-size: 10vw;
+  font-weight: 800;
+  color: #fff;
+  align-content: center;
+}
+
+.sobre-img { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7137254902);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.cien-vh {
+  max-height: 100vh;
+  width: 100vw;
+}
+
 @keyframes agranda {
   0% {
     transform: scale(1);
@@ -343,14 +380,6 @@ body {
 .encabezado { /*esto incluye el video de fondo y todo lo que aparece sobre él*/
   width: 100%;
   height: 59vw;
-  overflow: hidden;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.encabezado-pagina {
-  width: 100%;
   overflow: hidden;
   text-align: center;
   align-items: center;
@@ -391,7 +420,7 @@ body {
 
 .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4431372549);
+  background-color: rgba(0, 0, 0, 0.4588235294);
   color: #fff;
   width: 100%;
   height: calc(100% - 24px);
@@ -524,23 +553,25 @@ body {
   background-color: #233c68;
 }
 
-@media screen and (min-width: 768px) {
-  .grid-container-nav {
-    grid-template-columns: 120px 7fr 1fr;
-    grid-template-rows: 96px;
-  }
-  .grid-item-pais {
-    grid-column: 3;
-  }
-  .flex-container-paises {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.3em;
-    padding-right: 0.5em;
-  }
+.container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
+.container .box .columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .box .columna .img-galeria {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 576px) {
   .grande-titulo { /*esto habla del párrafo que dice Un lugar para descansar*/
     font-size: 2.2em;
@@ -554,6 +585,10 @@ body {
   }
   .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
     height: calc(100% - 28px);
+  }
+  .grid-container-footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo logo" "menu menu" "contacto horarios" "insta insta" "derechos derechos";
   }
 }
 @media screen and (min-width: 768px) {
@@ -580,6 +615,34 @@ body {
   .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
     height: calc(100% - 36px);
   }
+  .flex-container-simg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 96px);
+  }
+  .grid-container-nav {
+    grid-template-columns: 120px 7fr 1fr;
+    grid-template-rows: 96px;
+  }
+  .grid-item-pais {
+    grid-column: 3;
+  }
+  .flex-container-paises {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3em;
+    padding-right: 0.5em;
+  }
+  .container .box {
+    flex-direction: row;
+  }
+  .container .box .columna {
+    width: 32.5%;
+  }
 }
 @media screen and (min-width: 992px) {
   .video-fondo { /*esta clase habla únicamente del video de fondo*/
@@ -594,6 +657,12 @@ body {
   }
   .sobre-video { /*esto habla de todo lo que está sobre el video, pero excluye el video de fondo*/
     height: calc(100% - 42px);
+  }
+  .carousel-comentarios {
+    display: none;
+  }
+  .row-comentarios {
+    display: flex;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -638,27 +707,11 @@ body {
     position: relative;
     bottom: 40px;
   }
-}
-@media screen and (max-width: 768px) {
   .galeria-de-imagenes-div { /*esto es cada una de las imágenes en la galería del inicio*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-@media screen and (min-width: 992px) {
-  .carousel-comentarios {
-    display: none;
-  }
-  .row-comentarios {
-    display: flex;
-  }
-}
-@media screen and (min-width: 576px) {
-  .grid-container-footer {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "logo logo" "menu menu" "contacto horarios" "insta insta" "derechos derechos";
   }
 }
 
