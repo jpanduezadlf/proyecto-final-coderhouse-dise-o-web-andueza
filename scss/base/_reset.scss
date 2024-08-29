@@ -8,7 +8,7 @@
     box-sizing: border-box;
     font-weight: 400;
 }
-p, h1, h2, h3, h4, h5, h6, img, li, ul, ol { //Esto es únicamente porque Bootstrap destruye el margin del reset, al parecer. Si elimino esta información se rompen cosas como los comentarios (desaparecen el nombre de quien puso el comentario y el país). Está en reset, porque esto se reseteará para cuando se indique posteriormente.
+p, h1, h2, h3, h4, h5, h6, img, li, ul, ol, div { //Esto es únicamente porque Bootstrap destruye el margin del reset, al parecer. Si elimino esta información se rompen cosas como los comentarios (desaparecen el nombre de quien puso el comentario y el país). Está en reset, porque esto se reseteará para cuando se indique posteriormente.
     margin: 0;
     padding: 0;
 }

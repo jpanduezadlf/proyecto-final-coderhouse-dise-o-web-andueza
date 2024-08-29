@@ -11,13 +11,6 @@ body { // Estos son cambios que si se aplicaban en otra parte, quedaba mal la we
     align-items: center;
     justify-content: center;
 }
-//.encabezado-pagina {
-//    width: 100%;
-//    overflow: hidden;
-//    text-align: center;
-//    align-items: center;
-//    justify-content: center;
-//}
 .video-fondo{ /*esta clase habla únicamente del video de fondo*/
     object-fit: contain;
     position: absolute;
@@ -58,10 +51,23 @@ body { // Estos son cambios que si se aplicaban en otra parte, quedaba mal la we
         padding: 0;
     }
 }
-.imagen-galeria { /*esto es cada una de las imágenes en la galería del inicio*/
-    object-fit: cover;
-    height: 80vh;
-    max-width: 90%;
+.img-container {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    height: 50vh;
+    .imagen-galeria {
+        display: block;
+        transition: transform 0.5s;
+        object-fit: cover;
+        height: 50vh;
+        max-width: 100%;
+        width: 100%;
+        &:hover {
+            transform: scale(1.3);
+            transform-origin: 50% 50%;
+        }
+    }
 }
 .mapa-3d { /*esto es la sección en la que iría o bien un video o un mapa 3d*/
     @include flexSimple(column, center, center);
