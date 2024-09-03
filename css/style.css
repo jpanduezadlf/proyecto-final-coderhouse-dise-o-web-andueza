@@ -93,6 +93,11 @@ nav ul li.selected a {
   height: 20px;
 }
 
+.titulo-menu {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
 .footer {
   background-color: #53585a;
   color: #fff;
